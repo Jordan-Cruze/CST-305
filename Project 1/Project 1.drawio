@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="0SekzxZbjDiWqDC3i5mG">
+    <mxGraphModel dx="808" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="I58btK_PBQIvHJmyVjdS-4" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Start" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-9" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SymPy interprets equation" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-6" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Display CPU ODE information" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-7" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User enters ODE" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-11" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-8" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Enter initial temp and simulation time" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-13" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Generate time points" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-16" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SciPy solve_ivp() solves the ODE" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-18" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" target="I58btK_PBQIvHJmyVjdS-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-21" connectable="0" parent="I58btK_PBQIvHJmyVjdS-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.2333" y="2" as="geometry">
+            <mxPoint x="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-30" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-15" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Solver worked?" vertex="1">
+          <mxGeometry height="80" width="80" x="120" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-23" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Calculate numerical error estimate" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-25" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Display results" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-27" edge="1" parent="1" source="I58btK_PBQIvHJmyVjdS-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="I58btK_PBQIvHJmyVjdS-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Generate 2D graph" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-28" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#f8cecc;strokeColor=#b85450;" value="End" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="I58btK_PBQIvHJmyVjdS-31" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Throw error" vertex="1">
+          <mxGeometry height="80" width="120" x="270" y="1050" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
