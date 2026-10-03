@@ -24,7 +24,6 @@ where:
 * `Ta` is ambient temperature
 
 Example input:
-
 ```text
 -0.08 * (T - 25)
 ```
