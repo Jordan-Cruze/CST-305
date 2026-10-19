@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HsC-PF-x_2-mb0Fbly56">
+    <mxGraphModel dx="488" dy="1936" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-4" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-2" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Start" vertex="1">
+          <mxGeometry height="80" width="120" x="8" y="-462" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-6" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-3" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Read ODE from user input" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="-328" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-8" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-5" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Parse the equation" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="-214" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-11" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-7" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Construct the corresponding homogeneous equation" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-13" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-9" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Solve the homogeneous equation symbolically" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-15" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-12" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Construct the Green&#39;s function using the required initial conditions" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-17" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-14" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Evaluate the Green&#39;s function integral" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-19" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-16" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Simplify the resulting solution" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="356" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-21" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-18" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Verify the differential equation and initial conditions" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-23" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-20" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Numerically solve the initial value problem" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-25" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-22" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Compare the numerical and symbolic solutions" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="698" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-27" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-24" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Generate the homogeneous solution graph" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-29" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-26" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Generate the Green&#39;s function solution graph" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="926" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-31" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-28" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Generate the Green&#39;s function animation" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-33" edge="1" parent="1" source="r3q-B_6Dr09kbjCwex2P-30" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="r3q-B_6Dr09kbjCwex2P-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-30" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Display the results" vertex="1">
+          <mxGeometry height="60" width="120" x="8" y="1154" as="geometry" />
+        </mxCell>
+        <mxCell id="r3q-B_6Dr09kbjCwex2P-32" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Stop" vertex="1">
+          <mxGeometry height="80" width="120" x="8" y="1268" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
