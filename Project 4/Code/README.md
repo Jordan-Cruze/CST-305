@@ -1,300 +1,210 @@
-# CST-305 Project 4 – Digital Storage Data Degradation ODE Model
+# CST-305 – Project 4: Degradation of Data Integrity
 
-## Overview
+**Grand Canyon University**  
+**Course:** CST-305 – Ordinary Differential Equations  
+**Programmer:** Jordan Cruze  
+**Language:** Python
 
-This project uses a system of ordinary differential equations (ODEs) to model the degradation of data stored in a digital storage system over time.
+## Project Description
 
-The model represents five factors that can affect digital data integrity:
+This project uses systems of ordinary differential equations (ODEs) to model data movement and degradation in digital storage systems.
 
-1. Bit-flip errors
-2. Electrical and storage errors
-3. Write and update degradation
-4. Physical media degradation
-5. Backup and recovery errors
+The program models two different processor configurations:
 
-Each factor is represented by a state variable in the ODE system. The individual degradation factors are combined using weighted contributions to calculate the overall degradation of the stored data. The remaining data quality is then calculated as a percentage.
+1. A three-processor system where data moves between processors A, B, and C. Processor C also transfers data to an external network.
+2. A closed two-processor system where data moves between processors A and B without entering or leaving the overall system.
 
-The project uses Python to parse the ODE system, solve the equations numerically, calculate the overall data degradation, and visualize the results. Matplotlib is used to display the mathematical results, while Pillow is used to create progressively degraded versions of a sample image.
+The program uses matrix calculations, eigenvalue analysis, matrix exponentials, and numerical integration to examine how the systems behave over time.
 
-The image degradation is a visual representation of the mathematical model and is not intended to simulate the exact physical behavior of a specific storage device.
+## Features
 
-## Mathematical Approach
+- Three-processor mathematical model.
+- Closed two-processor mathematical model.
+- Custom processor model option.
+- Automatic coefficient matrix construction.
+- Differential equation generation.
+- Eigenvalue calculations.
+- Matrix exponential calculations.
+- Numerical ODE integration using SciPy.
+- Comparison of analytical and numerical solutions.
+- Graph generation to visualize system behavior.
+- Optional degradation rate for custom models.
 
-The project uses a system of five first-order linear ODEs.
+## Technologies and Libraries
 
-The general form of the system is:
+The project uses Python and the following libraries:
 
-```text
-x'(t) = A x(t) + f(t)
-```
-
-where `x(t)` is the vector containing the five degradation factors, `A` is the coefficient matrix, and `f(t)` is the forcing vector.
-
-The five state variables are defined as:
-
-```text
-x₁(t) = bit-flip degradation
-x₂(t) = electrical/storage degradation
-x₃(t) = write/update degradation
-x₄(t) = physical media degradation
-x₅(t) = backup/recovery degradation
-```
-
-The default system used by the program is:
-
-```text
-x₁' = -0.010x₁ + 0.010
-x₂' = -0.015x₂ + 0.015
-x₃' = -0.020x₃ + 0.020
-x₄' = -0.008x₄ + 0.008
-x₅' = -0.012x₅ + 0.012
-```
-
-The matrix form is:
-
-```text
-        [ -0.010   0       0       0       0   ]
-        [  0      -0.015   0       0       0   ]
-x'  =   [  0       0      -0.020   0       0   ] x
-        [  0       0       0      -0.008   0   ]
-        [  0       0       0       0      -0.012]
-```
-
-with the forcing vector:
-
-```text
-        [0.010]
-        [0.015]
-f(t) =  [0.020]
-        [0.008]
-        [0.012]
-```
-
-The initial conditions are:
-
-```text
-x₁(0) = x₂(0) = x₃(0) = x₄(0) = x₅(0) = 0
-```
-
-Each equation follows the form:
-
-```text
-xᵢ' = rᵢ(1 - xᵢ)
-```
-
-where `rᵢ` represents the degradation rate for the corresponding factor.
-
-## Overall Data Degradation
-
-The individual degradation factors are combined using the following weights:
-
-```text
-Bit-flip errors:          0.30
-Electrical/storage:       0.15
-Write/update:             0.20
-Physical media:           0.25
-Backup/recovery:          0.10
-```
-
-The weights sum to 1.0.
-
-The overall degradation is calculated using:
-
-```text
-D(t) = 0.30x₁ + 0.15x₂ + 0.20x₃ + 0.25x₄ + 0.10x₅
-```
-
-The remaining data quality is calculated as:
-
-```text
-Q(t) = 1 - D(t)
-```
-
-The program displays data quality as a percentage:
-
-```text
-Data Quality (%) = 100(1 - D(t))
-```
-
-A higher degradation value therefore corresponds to a lower remaining data quality.
-
-## Simulation
-
-The default simulation runs for 100 years using 500 time points.
-
-The different degradation rates cause the five factors to increase at different speeds. The overall degradation is determined by both the individual rates and their assigned weights.
-
-At the end of the default 100-year simulation, the model produces approximately:
-
-```text
-Overall degradation: 68.9%
-Remaining data quality: 31.1%
-```
-
-These values are outputs of the mathematical model and should not be interpreted as a prediction for a specific physical storage medium.
+| Library | Purpose |
+|---|---|
+| NumPy | Matrix creation, array operations, and mathematical calculations. |
+| SciPy | Matrix exponential calculations and numerical ODE integration. |
+| Matplotlib | Generating graphs of the differential equation solutions. |
+| argparse | Supporting command-line program options. |
 
 ## Requirements
 
-- Python 3
-- NumPy
-- SciPy
-- SymPy
-- Matplotlib
-- Pillow
+Install Python 3 and the required libraries before running the program.
 
-## Installation
+Install dependencies using:
 
-Create and activate a Python virtual environment:
-
-```text
-python -m venv .venv
+```bash
+pip install numpy scipy matplotlib
 ```
 
-Activate it on Windows PowerShell:
+The `argparse` module is included with Python and does not require a separate installation.
 
-```text
-.venv\Scripts\Activate.ps1
-```
+## How to Run the Program
 
-Install the required packages:
+1. Download or clone the repository.
+2. Open a terminal in the project directory.
+3. Install the required Python libraries.
+4. Run the Python program.
 
-```text
-pip install -r requirements.txt
-```
+Example:
 
-## Running the Program
-
-Run the program from the project directory with:
-
-```text
+```bash
 python main.py
 ```
 
-The program first allows the user to choose whether to use the default ODE system or enter a custom system.
+Replace `main.py` with the actual Python filename if it is different.
 
-For the default model, the program uses the five equations described in the Mathematical Approach section.
+Follow the prompts to select a mathematical model and enter the requested parameters.
 
-The program then solves the ODE system and displays the results.
+## Mathematical Models
 
-## Program Output
+### Part 1: Three-Processor System
 
-The program produces several outputs.
+The first model consists of three interconnected processors, each with a capacity of 100 MB.
 
-### ODE Results
+The assumed transfer rates are:
 
-The program displays the coefficient matrix and forcing vector used by the ODE system.
+| Transfer | Rate |
+|---|---:|
+| A → B | 6 MB/s |
+| B → A | 2 MB/s |
+| B → C | 5 MB/s |
+| C → B | 1 MB/s |
+| C → Network | 4 MB/s |
 
-It then numerically solves the system using SciPy's `solve_ivp()` function.
+The system is represented by:
 
-### Mathematical Visualization
+\[
+x'(t)=Ax(t)
+\]
 
-The first visualization contains two graphs:
+Where:
 
-1. Individual Data Degradation Factors
-2. Overall Data Integrity Over Time
+\[
+A=
+\begin{bmatrix}
+-0.06&0.02&0\\
+0.06&-0.07&0.01\\
+0&0.05&-0.05
+\end{bmatrix}
+\]
 
-The first graph shows the change in each of the five degradation factors.
+The initial conditions are:
 
-The second graph shows both overall degradation and remaining data quality over the simulation period.
+\[
+x(0)=
+\begin{bmatrix}
+100\\100\\100
+\end{bmatrix}
+\]
 
-### Image Visualization
+The approximate eigenvalues are:
 
-After the mathematical graphs are closed, the program displays five versions of the sample image:
+- -0.1054
+- -0.05315
+- -0.02141
 
-```text
-Original
-25 Years
-50 Years
-75 Years
-100 Years
-```
+All three eigenvalues are negative, indicating that the modeled system is asymptotically stable.
 
-The amount of visual noise added to the image is based on the calculated degradation value at each point in time.
+### Part 2: Closed Two-Processor System
 
-The image progression provides an intuitive visual representation of how increasing degradation can affect stored digital data.
+The second model consists of two processors, A and B, with data moving between them.
 
-The program expects the image file to be named:
+The assumed transfer rates are:
 
-```text
-sample_image.jpg
-```
+| Transfer | Rate |
+|---|---:|
+| A → B | 2 MB/s |
+| B → A | 3 MB/s |
 
-and placed in the same directory as `main.py`.
+The coefficient matrix is:
 
-### Final Numerical Results
+\[
+A=
+\begin{bmatrix}
+-0.02&0.03\\
+0.02&-0.03
+\end{bmatrix}
+\]
 
-The program also displays the final degradation values for each factor, the overall degradation, and the remaining data quality.
+The initial state vector is:
 
-The program provides an option to save the generated degraded images.
+\[
+x(0)=
+\begin{bmatrix}
+1\\-1
+\end{bmatrix}
+\]
 
-## Packages
+The eigenvalues are:
 
-### NumPy
+- 0
+- -0.05
 
-NumPy is used for numerical calculations, arrays, matrix operations, time values, and processing the ODE results.
+The analytical solution is:
 
-### SciPy
+\[
+x(t)=
+\begin{bmatrix}
+e^{-0.05t}\\
+-e^{-0.05t}
+\end{bmatrix}
+\]
 
-SciPy is used to numerically solve the system of ordinary differential equations using the `solve_ivp()` function.
+The zero eigenvalue represents the conserved total state of the closed mathematical system.
 
-The default numerical method is the RK45 method.
+**Note:** The initial state vector follows the mathematical initial conditions used in the assignment and program. The negative second component is not a physically meaningful quantity of stored data.
 
-### SymPy
+## Program Implementation
 
-SymPy is used to parse the ODE equations and convert the equations into the matrix and forcing-vector representation used by the numerical solver.
+The program is organized into functions that handle different parts of the mathematical and computational process.
 
-### Matplotlib
+| Function | Description |
+|---|---|
+| `read_model()` | Collects model information and user input. |
+| `build_matrix()` | Constructs the coefficient matrix from processor transfer rates. |
+| `print_equations()` | Displays the resulting differential equations. |
+| `solve_exact()` | Calculates the analytical solution using the matrix exponential. |
+| `solve_numeric()` | Calculates the numerical solution using SciPy's ODE integration. |
+| `plot_solution()` | Generates graphs displaying the system behavior over time. |
 
-Matplotlib is used to create the graphs showing the individual degradation factors, overall degradation, and remaining data quality.
+## Numerical Verification
 
-### Pillow
+The program compares two methods of solving the differential equation systems:
 
-Pillow is used to load the sample image and create progressively degraded versions based on the calculated degradation values.
+1. The analytical matrix exponential method using `scipy.linalg.expm()`.
+2. The numerical integration method using `scipy.integrate.odeint()`.
 
-## Implementation
+The maximum absolute difference between the two solutions is used to evaluate numerical accuracy.
 
-The program follows these general steps:
+The recorded maximum errors were:
 
-1. Start the program.
-2. Load the default ODE system or accept a custom system.
-3. Parse the equations using SymPy.
-4. Convert the equations into matrix form.
-5. Define the initial conditions.
-6. Define the simulation time.
-7. Solve the ODE system using SciPy.
-8. Calculate the weighted overall degradation.
-9. Calculate the remaining data quality.
-10. Display the mathematical graphs.
-11. Load `sample_image.jpg`.
-12. Generate progressively degraded image versions.
-13. Display the image progression.
-14. Display the final numerical results.
-15. Optionally save the degraded images.
-16. End the program.
+| Model | Maximum Absolute Error |
+|---|---:|
+| Three-processor system | \(1.07 \times 10^{-8}\) |
+| Two-processor system | \(1.31 \times 10^{-7}\) |
 
-## Project Structure
+These small differences indicate that the numerical solutions closely match the analytical solutions.
 
-```text
-DigitalStorage/
-├── main.py
-├── README.md
-├── requirements.txt
-├── sample_image.jpg
-└── .venv/
-```
+## Repository Contents
 
-The `.venv` directory contains the Python virtual environment and does not need to be included in the GitHub repository.
+The repository contains the Python implementation and supporting project documentation.
 
-## Project Limitations
-
-The model is a simplified mathematical representation of digital data degradation.
-
-The five degradation factors and their rates are assumptions used to demonstrate how a system of ODEs can represent multiple sources of data degradation. Actual degradation depends on the specific storage technology, environmental conditions, storage duration, write cycles, error-correction methods, and other physical factors.
-
-The image visualization is also a simplified representation. The program uses artificial image noise to visually demonstrate increasing degradation rather than simulating actual bit-level corruption of a JPEG file.
-
-The current implementation is primarily designed around the five-factor model used for this project. Custom equations may be entered, but they must follow the expected first-order linear system format supported by the program.
-
-## References
-
-The project uses the official documentation for NumPy, SciPy, SymPy, Matplotlib, and Pillow. Additional references concerning numerical ODE methods and digital storage are included in the project documentation.
+- Python source code.
+- Project documentation.
+- README.md.
+- Generated graphs and screenshots, if included.
